@@ -1,0 +1,16 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude config (not needed for deployment)
+.claude/
+
+# Extracted raw PPT images (only curated images are in images/)
+# If you want to reduce repo size, you can remove unused images from images/ folder
