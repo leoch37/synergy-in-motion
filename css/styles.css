@@ -419,6 +419,10 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   border: none;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  /* Force GPU layer to prevent sub-pixel bright corner artifacts */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  isolation: isolate;
 }
 
 .hero-card.has-photo::before {
