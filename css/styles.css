@@ -414,21 +414,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero cards with photo backgrounds */
 .hero-card.has-photo {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   border: none;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35), inset 0 0 0 2px rgba(4, 20, 42, 0.95);
-  /* Force GPU layer to prevent sub-pixel bright corner artifacts */
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  isolation: isolate;
-}
-
-.hero-card.has-photo::before {
-  background: linear-gradient(180deg, rgba(4, 20, 42, 0.42) 0%, rgba(4, 20, 42, 0.80) 100%);
-  opacity: 1 !important;
-  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
 }
 
 .hero-card.has-photo > * {
