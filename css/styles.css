@@ -178,6 +178,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: var(--transition);
 }
 
+/* Hide logo when navbar is transparent (over hero) — only show on white band */
+.navbar:not(.scrolled) .nav-logo {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .navbar.scrolled .nav-logo img {
   height: 36px;
 }
@@ -779,6 +785,34 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
+/* Text-only VFT layout (no image) */
+.vft-text-only {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.vft-text-only .section-label {
+  color: var(--blue-300);
+}
+
+.vft-text-only .section-label::before {
+  background: var(--blue-300);
+}
+
+.vft-text-only h2 {
+  color: var(--white);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 1.5rem;
+}
+
+.vft-text-only p {
+  color: var(--blue-200);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+}
+
 .vft-text .section-label {
   color: var(--blue-300);
 }
@@ -1009,23 +1043,33 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--gray-50);
 }
 
-.customer-logos {
+.customer-logos-grid {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.logo-row {
+  display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem 2.5rem;
+}
+
+.logo-row-partners {
   gap: 3rem;
-  margin-top: 3rem;
 }
 
 .customer-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.25rem;
+  padding: 0.5rem 1rem;
   transition: var(--transition);
   filter: grayscale(100%);
-  opacity: 0.6;
+  opacity: 0.55;
 }
 
 .customer-logo:hover {
@@ -1039,6 +1083,33 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 140px;
   object-fit: contain;
   display: block;
+}
+
+/* Text-based logo badges for brands without image files */
+.logo-text-wrap {
+  padding: 0;
+}
+
+.logo-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 1.1rem;
+  border-radius: 5px;
+  color: white;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  min-height: 40px;
+}
+
+.logo-badge-tall {
+  padding: 0.5rem 1.25rem;
+  min-height: 52px;
+  text-align: center;
 }
 
 /* ---------- NEWS ---------- */
