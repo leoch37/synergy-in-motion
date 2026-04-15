@@ -1085,12 +1085,19 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
-/* Logos with colored image backgrounds — give them a white card */
+/* Logos with light image backgrounds — give them a white card */
 .customer-logo.white-bg {
   background: white;
   border-radius: 8px;
   padding: 0.5rem 0.9rem;
   box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+
+/* Logos that need a dark card (e.g. framas white-on-black) */
+.customer-logo.dark-bg {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
 }
 
 /* Text-based logo badges — keep full color, no grayscale */
