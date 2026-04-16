@@ -939,8 +939,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .team-avatar {
-  width: 80px;
-  height: 80px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--blue-100), var(--blue-200));
   display: flex;
