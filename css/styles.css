@@ -951,6 +951,18 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--blue-600);
 }
 
+.team-avatar-photo {
+  background: none;
+  overflow: hidden;
+}
+
+.team-avatar-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .team-card h4 {
   font-size: 1rem;
   color: var(--blue-900);
